@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | NutriFit</title>
+  <link rel="stylesheet" href="/styles/auth.css">
+    <link rel="icon" type="image/png" href="/assets/images/fit_Icon.png">
+    <link rel="apple-touch-icon" href="/assets/images/fit_Icon.png">
+</head>
+<body>
+  <div class="mainContainer">
+    <!-- Left Side -->
+    <div class="part1">
+      <img src="/assets/images/logo.png" alt="NutriFit Logo" class="logo">
+    </div>
+
+    <!-- Right Side -->
+    <div class="part2">
+      <div class="inputField">
+        <h1>Create your Account</h1>
+        <p class="subtitle">Create your email and password to access your account</p>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="password">Password</label>
+          <div class="password-container">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <span class="togglePassword"></span>
+          </div>
+
+          <label for="confirm-password">Confirm Password</label>
+          <div class="password-container">
+            <input type="password" id="confirm-password" placeholder="Enter your password" required>
+            <span class="togglePassword"></span>
+          </div>
+
+          <button type="submit" class="signInBtn">Sign Up</button>
+        </form>
+
+        <p class="signup-text">
+          Already have an account? <a href="auth.html">Sign In</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="/script/signup.js"></script>
+
+</body>
+</html>
