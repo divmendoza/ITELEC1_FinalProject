@@ -1,0 +1,3371 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E9F7F8;
+}
+
+h1, p {
+  margin: 0px;
+}
+
+.main-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 130px; 
+  padding-right: 40px;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-left {
+  flex-grow: 1;
+}
+
+.header-right p,
+.header-left p {
+  color: #888888;
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.header-right p {
+  font-style: italic;
+}
+
+.header-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.cards-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  gap: 25px;
+}
+
+.cards-left {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-top {
+  display: flex;
+  flex-grow: 1;
+  padding-bottom: 30px;
+  gap: 25px;
+}
+
+.exercise-card {
+  flex-grow: 1;
+  background-image: url('/assets/images/exercise-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  border-radius: 24px;
+  padding: 25px 15px 15px 25px;
+  display: flex;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+
+}
+.designAnchor{
+    text-decoration: none;
+}
+.exercise-card p {
+  font-size: 25px;
+  width: 230px;
+}
+
+.exercise-btn-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.card-bottom-btn {
+  height: 36px;
+  width: 150px;
+  background-color: rgba(33, 33, 33, 0.8);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.card-bottom-btn:hover {
+  transform: scale(1.04);
+}
+
+.card-bottom-btn p {
+  margin-left: 6px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.card-bottom-btn .card-btn {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 3px 10px 4px 8px;
+  margin-bottom: 1px;
+  border-radius: 22px 12px 50px 22px;
+}
+
+.nutrition-card {
+  height: 100%;
+  width: 300px;
+  background-color: rgba(164, 184, 53, 0.50);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.nutrition-header {
+  display: flex;
+  width: 100%;
+  margin: 18px 18px 0px 18px;
+}
+
+.nutrition-header h1 {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.nutrition-header .egg {
+  font-size: 22px;
+  margin-left: 18px;
+}
+
+.nutrition-mid {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+.kiwi-img {
+  width: 170px;
+  margin-bottom: 12px;
+}
+
+.nutrition-mid p {
+  font-size: 14px;
+  text-align: center;
+  width: 220px;
+}
+
+.nutrition-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nutrition-btn {
+  background-color: rgba(75, 106, 74, 0.8);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 160px;
+}
+
+.cards-bottom{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.weight-card {
+  border-radius: 24px;
+  width: 330px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.weight-header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.weight-title {
+  display: flex;
+  flex-grow: 1;
+}
+
+.weight-title .dumbell {
+  margin-left: 16px;
+}
+
+.weight-title h1 {
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.weight {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: flex-end;
+  margin-right: 18px;
+}
+
+.weight h1 {
+  font-weight: 100;
+}
+
+.weight p {
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.weight-mid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.weight-mid img {
+  width: 200px;
+}
+
+.weight-bottom {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.goal-container {
+  display: flex;
+  align-items: center;
+}
+
+.goal-container .person-icon {
+  font-size: 32px;
+  margin-left: 18px;
+}
+
+.goal h1 {
+  font-size: 14px;
+}
+
+.goal-middle {
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;  
+}
+
+.motivation-container {
+  margin-right: 18px;
+}
+
+.motivation-container p {
+  width: 100px;
+  font-size: 11px;
+}
+
+.motivation-container h1 {
+  font-size: 14px;
+}
+
+.statistics-card {
+  background-color: #272C2B;
+  height: 100%;
+  flex-grow: 1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  color: #ffffff;
+}
+
+.statistics-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.statistics-title {
+  display: flex;
+  padding: 2px 7px 2px 3px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(105, 105, 105, 0.65);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 25px;
+  color: #ffffff;
+}
+
+.statistics-title h1 {
+  font-size: 20px;
+  margin-left: 3px;
+  margin-top: 2px;
+}
+
+.statistics-title span {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  font-size: 28px;
+}
+
+.cal-container {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.current-cal,
+.limit-cal {
+  width: 50%;
+  display: flex;
+  margin-left: 25px;
+  align-items: flex-end;
+} 
+
+.limit-cal {
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.current-cal h1,
+.limit-cal h1 {
+  font-weight: 100;
+}
+
+.current-cal p,
+.limit-cal p {
+  font-weight: 100;
+  font-size: 11.5px;
+  color: rgba(190, 190, 190, 0.90);
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
+
+.cal-indicator-container {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.cal-indicator {
+  width: 100%;
+  height: 100%;
+  background-color: #A5B835;
+  margin: 3px 25px;
+}
+
+.statistics {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.height {
+  display: flex;
+  margin-left: 25px;
+  align-items: flex-end;
+}
+
+.height h1 {
+  font-weight: 100;
+  font-size: 55px;
+}
+
+.height p {
+  margin-bottom: 8px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: rgba(190, 190, 190, 0.90);
+
+}
+
+.macros {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 25px;
+}
+
+.carbs-container,
+.proteins-container,
+.fats-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.carbs-container p,
+.proteins-container p,
+.fats-container p {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.carbs,
+.proteins,
+.fats {
+  display: flex;
+  align-items: flex-end;
+}
+
+.carbs h1,
+.proteins h1,
+.fats h1 {
+  display: flex;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.carbs p,
+.proteins p,
+.fats p {
+  color: rgba(190, 190, 190, 0.90);
+  font-size: 15px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+  
+
+
+.cards-right {
+  width: 280px;
+  height: 100%;
+}
+
+.recipe-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #8BCCE0 40%, #ffffff 90%);
+  border-radius: 24px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-card {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.food {
+  margin-bottom: 15px;
+}
+
+.recipe-card h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.recipe-card p {
+  text-align: center;
+  font-size: 14px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.recipe-btn {
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;  
+  cursor: pointer;
+}
+
+.recipe-btn:hover {
+  transform: scale(1.04);
+  box-shadow: -2px 8px 8px rgba(0, 0, 0, 0.3);
+}
+/* Dashboard Proper */
+
+.mainContainer{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 0rem;
+    padding-left: 80px;
+    grid-template-rows: 0.2fr 2fr;
+}
+.time{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hi{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    grid-template-rows: 1.7fr 1fr;
+}
+.greetings{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    font-size: 1.9rem;
+    color: rgb(0, 0, 0);
+    padding: 0;;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.date{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.456);
+}
+.date2 {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 100%;
+    padding-right: 40px;
+    text-align: right;
+    color: black;
+    font-size: 20px;
+}
+
+.oras, .araw {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.oras {
+    font-size: 1.9rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    align-items: end;
+}
+
+.araw {
+    font-size: 18px;
+    font-style: italic;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.456);
+
+}
+
+.mainDb{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 5px 30px 20px 0px;
+    grid-template-columns: 3fr 0.85fr;
+}
+
+.part1{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.upper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: 2fr 0.8fr;
+    padding: 0px 20px 20px 40px;
+}
+.push{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-image: url(/assets/images/exercise-image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #00000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.pushTitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    padding: 25px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.exercise-btn-container {
+    padding: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.card-bottom-btn {
+    height: 36px;
+    width: 150px;
+    background-color: rgba(33, 33, 33, 0.8);
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+    padding-right: 8px;
+    font-weight: bold;
+}
+
+.card-bottom-btn:hover {
+    transform: scale(1.04);
+}
+
+.card-bottom-btn p {
+    margin-left: 6px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.card-bottom-btn .card-btn {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 16px;
+    padding: 3px 10px 4px 8px;
+    margin-bottom: 1px;
+    border-radius: 22px 12px 50px 22px;
+}
+
+.kiwi{
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.nutrition-card {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(164, 184, 53, 0.50);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.nutrition-header {
+  display: flex;
+  width: 100%;
+  margin: 18px 18px 0px 18px;
+}
+
+.nutrition-header h1 {
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.nutrition-header .egg {
+  font-size: 22px;
+  margin-left: 18px;
+  color: #000000;
+
+}
+
+.nutrition-mid {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+.kiwi-img {
+  width: 170px;
+  margin-bottom: 12px;
+}
+
+.nutrition-mid p {
+  font-size: 11.4px;
+  text-align: center;
+  width: 220px;
+}
+
+.nutrition-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nutrition-btn {
+  background-color: rgba(75, 106, 74, 0.8);
+  margin-right: 17px;
+  margin-bottom: 19px;
+  width: 160px;
+}
+
+.cards-bottom{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.lower{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 0px 20px 0px 40px;
+    gap:1.3rem;
+    grid-template-columns: 0.8fr 2fr;
+}
+.weightMain{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+
+}
+.calories{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    background-color: #272C2B;
+}
+.second{
+    width: 100%;
+    height: 100%;
+    gap: 1.3rem;
+}
+.part2{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8BCCE0 40%, #ffffff 90%);
+    padding: 0px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 26px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+} 
+.foodImag{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.foodImag img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+.foodInfo{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.3fr 0.4fr 0.8fr;
+}
+.foodTitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.foodParag{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding: 0px 25px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+.foodButton{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.actualFoodButton{
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    height: 55px;
+    background-color: #000000;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.actualFoodButton:hover{
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.582);
+    transform: scale(1.01);
+}
+.material-symbols-rounded{
+    color: white;
+}
+.hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 200;
+
+}
+
+.hamburger span {
+  font-size: 42px;
+    color: #000000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-container {
+  transition: all 0.5s ease;
+
+}
+
+.weight-card {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.weight-header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.weight-title {
+  display: flex;
+  flex-grow: 1;
+  font-size: 11rem;
+}
+
+.weight-title .dumbell {
+  margin-left: 16px;
+    color: #000000;
+
+}
+
+.weight-title h1 {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.weight {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: flex-end;
+  margin-right: 18px;
+}
+
+.weight h1 {
+    font-weight: 600;
+}
+
+.weight p {
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.weight-mid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.weight-mid img {
+  width: 180px;
+}
+
+.weight-bottom {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.goal-container {
+  display: flex;
+  align-items: center;
+}
+
+.goal-container .person-icon {
+  font-size: 32px;
+  margin-left: 18px;
+    color: #000000;
+
+}
+
+.goal h1 {
+  font-size: 11px;
+}
+
+.goal-middle {
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;  
+}
+
+.motivation-container {
+  margin-right: 20px;
+}
+
+.motivation-container p {
+  width: 100px;
+  font-size: 11px;
+}
+
+.motivation-container h1 {
+  font-size: 14px;
+}
+
+
+.statistics-card {
+  background-color: #272C2B;
+  height: 100%;
+  flex-grow: 1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  color: #ffffff;
+}
+
+.statistics-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.statistics-title {
+  display: flex;
+  padding: 2px 7px 2px 3px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(105, 105, 105, 0.65);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 25px;
+  color: #ffffff;
+}
+
+.statistics-title h1 {
+  font-size: 20px;
+  margin-left: 3px;
+  margin-top: 2px;
+}
+
+.statistics-title span {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  font-size: 28px;
+}
+
+.cal-container {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.current-cal,
+.limit-cal {
+  width: 50%;
+  display: flex;
+  margin-left: 25px;
+  align-items: flex-end;
+} 
+
+.limit-cal {
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.current-cal h1,
+.limit-cal h1 {
+  font-weight: 300;
+}
+
+.current-cal p,
+.limit-cal p {
+  font-weight: 100;
+  font-size: 11.5px;
+  color: rgba(190, 190, 190, 0.90);
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
+
+.cal-indicator-container {
+  width: 100%;
+  height: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.cal-indicator {
+  width: 100%;
+  height: 100%;
+  background-color: #A5B835;
+  margin: 3px 25px;
+  
+}
+
+.statistics {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.height {
+  display: flex;
+  margin-left: 25px;
+  align-items: flex-end;
+}
+
+.height h1 {
+  font-weight: 300;
+  font-size: 45px;
+}
+
+.height p {
+  margin-bottom: 8px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: rgba(190, 190, 190, 0.90);
+
+}
+
+.macros {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 25px;
+}
+
+.carbs-container,
+.proteins-container,
+.fats-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.carbs-container p,
+.proteins-container p,
+.fats-container p {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.carbs,
+.proteins,
+.fats {
+  display: flex;
+  align-items: flex-end;
+}
+
+.carbs h1,
+.proteins h1,
+.fats h1 {
+  display: flex;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.carbs p,
+.proteins p,
+.fats p {
+  color: rgba(190, 190, 190, 0.90);
+  font-size: 15px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+
+
+
+
+
+/* Extra small: phones < 480px */
+@media (max-width: 479px) {
+    .mainContainer {
+        grid-template-rows: 0.3fr 2fr;
+        padding: 50px 0px 0px 0px;
+    }
+    .logo-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .logo-container img{
+        position: absolute;
+        display: block;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+
+    .time{
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px 0px 10px;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+    }
+    .hi{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        padding-left: 15px;
+        grid-template-rows: 1.7fr 1fr;
+    }
+    .greetings{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        line-height: 1.7rem;
+        align-items: end;
+        font-size: 1.5rem;
+        color: rgb(0, 0, 0);
+        padding: 0;;
+        font-weight: 600;
+        font-family: "Poppins";
+    }
+
+    .date{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        font-size: 11px;
+        color: rgba(0, 0, 0, 0.456);
+    }
+    .date2 {
+        display: grid;
+        grid-template-rows: 1.7fr 1fr;
+        width: 100%;
+        height: 100%;
+        padding-right: 20px;
+        text-align: right;
+        color: black;
+        font-size: 10px;
+    }
+
+    .oras, .araw {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .oras {
+        font-size: 1.5rem;
+        align-items: end;
+    }
+
+    .araw {
+        font-style: italic;
+        font-size: 11px;
+        align-items: baseline;
+    }
+
+    .mainDb{
+        width: 100%;
+        height: 640px;
+        display: grid;
+        padding: 20px 0px 2px 0px;
+        grid-template-columns: none;
+        gap: 1.3rem;
+        grid-template-rows: 3fr 1.3fr;
+    }
+    .upper{
+        width: 100%;
+        height: 600px;
+        display: grid;
+        gap: 1.3rem;
+        grid-template-rows: 1fr 1.9fr;
+        grid-template-columns: none;
+        padding: 0px 20px 20px 20px;
+    }
+    .lower{
+        width: 100%;
+        height: 610px;
+        display: grid;
+        padding: 0px 20px 0px 20px;
+        gap:1.3rem;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: none;
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        gap: 1.3rem;
+        padding: 0px 20px 30px 20px;
+    }
+    .part2{
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(to right, #8BCCE0 40%, #ffffff 90%);
+        padding: 30px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    } 
+    .menubar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255,255,255,0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        z-index: 100;
+    }
+
+    .menu-container.active {
+        right: 0;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile-container {
+        margin-top: 40px;
+        width: 50px;
+        height: 50px;
+        background: url('/assets/images/profile.png') center/cover no-repeat;
+        border-radius: 50%;
+        background-color: #5D8B59;
+    }
+
+    .hamburger.active span {
+        transform: rotate(180deg);
+        color: rgb(0, 0, 0);
+        content: 'close';
+    }
+    .push{
+        grid-template-columns: 1fr 0.8fr;
+    }
+    .pushTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        padding: 20px 0px 0px 20px;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .exercise-btn-container {
+        padding: 10px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .card-bottom-btn {
+        height: 34px;
+        width: 130px;
+        background-color: rgba(33, 33, 33, 0.8);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        border-bottom-right-radius: 40px;
+        cursor: pointer;
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .card-bottom-btn:hover {
+        transform: scale(1.04);
+    }
+
+    .card-bottom-btn p {
+        margin-left: 8px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .card-bottom-btn .card-btn {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        color: #000000;
+        background-color: #ffffff;
+        font-size: 16px;
+        padding: 3px 10px 4px 8px;
+        margin-bottom: 1px;
+        border-radius: 22px 12px 50px 22px;
+    }
+    .kiwi{
+        border-radius: 30px;
+        width: 100%;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        height: 100%;
+    }
+
+    .nutrition-card {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(164, 184, 53, 0.50);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+    }
+
+    .nutrition-header {
+        display: flex;
+        width: 100%;
+        margin: 18px 18px 0px 18px;
+    }
+
+    .nutrition-header h1 {
+        font-size: 27px;
+        margin-left: 8px;
+    }
+
+    .nutrition-header .egg {
+        font-size: 33px;
+        margin-left: 18px;
+    }
+
+    .nutrition-mid {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .kiwi-img {
+        width: 240px;
+        margin-bottom: 12px;
+    }
+
+    .nutrition-mid p {
+        font-size: 20.4px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .nutrition-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nutrition-btn {
+        background-color: rgba(75, 106, 74, 0.8);
+        margin-right: 17px;
+        height: 40px;
+        margin-bottom: 19px;
+        width: 170px;
+    }
+    .nutrition-btn p{
+        font-size: 15px;
+    }
+
+    .cards-bottom{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .weight-card {
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    }
+
+    .weight-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    }
+
+    .weight-title {
+    display: flex;
+    flex-grow: 1;
+    font-size: 11rem;
+    }
+
+    .weight-title .dumbell {
+    margin-left: 26px;
+    }
+
+    .weight-title h1 {
+    font-size: 26px;
+    margin-left: 8px;
+    }
+
+    .weight {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-right: 18px;
+    }
+
+    .weight h1 {
+        font-weight: 600;
+    }
+
+    .weight p {
+    margin-bottom: 4px;
+    margin-left: 4px;
+    }
+
+    .weight-mid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    }
+
+    .weight-mid img {
+    width: 270px;
+    }
+
+    .weight-bottom {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+    }
+
+    .goal-container {
+    display: flex;
+    align-items: center;
+    }
+
+    .goal-container .person-icon {
+    font-size: 62px;
+    margin-left: 18px;
+    }
+
+    .goal h1 {
+    font-size: 18px;
+    }
+
+    .goal-middle {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100%;  
+    }
+
+    .motivation-container {
+    margin-right: 30px;
+    }
+
+    .motivation-container p {
+    width: 100px;
+    font-size: 21px;
+    }
+
+    .motivation-container h1 {
+        margin-top: 20px;
+    font-size: 20px;
+    }
+    .statistics-card {
+        background-color: #272C2B;
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+
+        flex-grow: 1;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 24px;
+        color: #ffffff;
+    }
+
+    .statistics-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .statistics-title {
+        display: flex;
+        padding: 2px 7px 2px 3px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(105, 105, 105, 0.65);
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-left: 25px;
+        color: #ffffff;
+    }
+
+    .statistics-title h1 {
+        font-size: 17px;
+        margin-left: 3px;
+        margin-top: 2px;
+    }
+
+    .statistics-title span {
+        font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+        font-size: 20px;
+    }
+
+    .cal-container {
+        display: flex;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .current-cal,
+    .limit-cal {
+        width: 50%;
+        display: flex;
+        margin-left: 25px;
+        align-items: flex-end;
+    } 
+
+    .limit-cal {
+        justify-content: flex-end;
+        margin-right: 25px;
+    }
+
+    .current-cal h1,
+    .limit-cal h1 {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .current-cal p,
+    .limit-cal p {
+        font-weight: 300;
+        font-size: 11.5px;
+        color: rgba(190, 190, 190, 0.90);
+        margin-bottom: 6px;
+        margin-left: 2px;
+    }
+
+    .cal-indicator-container {
+        width: 100%;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+
+    .cal-indicator {
+        width: 100%;
+        height: 100%;
+        background-color: #A5B835;
+        margin: 3px 25px;
+    }
+
+    .statistics {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .height {
+        display: flex;
+        margin-left: 25px;
+        align-items: flex-end;
+    }
+
+    .height h1 {
+        font-weight: 300;
+        font-size: 22px;
+    }
+
+    .height p {
+        margin-bottom: 8px;
+        margin-left: 5px;
+        font-size: 12px;
+        color: rgba(190, 190, 190, 0.90);
+
+    }
+
+    .macros {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-grow: 1;
+        margin-right: 25px;
+    }
+
+    .carbs-container,
+    .proteins-container,
+    .fats-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carbs-container p,
+    .proteins-container p,
+    .fats-container p {
+        font-size: 10px;
+        letter-spacing: 0.6px;
+    }
+
+    .carbs,
+    .proteins,
+    .fats {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .carbs h1,
+    .proteins h1,
+    .fats h1 {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .carbs p,
+    .proteins p,
+    .fats p {
+        color: rgba(190, 190, 190, 0.90);
+        font-size: 12px;
+        margin-left: 5px;
+        margin-bottom: 3px;
+    }
+    
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #8BCCE0 40%, #ffffff 90%);
+        padding: 0px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 26px;
+        display: grid;
+        grid-template-rows: 0.9fr 1fr;
+    } 
+    .foodImag{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .foodImag img{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        display: block;
+    }
+    .foodInfo{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 0.3fr 0.4fr 0.8fr;
+    }
+    .foodTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .foodParag{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        padding: 10px 25px 0px 25px;
+        font-family: sans-serif;
+        font-size: 0.9rem;
+    }
+    .foodButton{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding-bottom: 10px;
+    }
+    .actualFoodButton{
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        height: 55px;
+        background-color: #000000;
+        transition: 0.2s;
+    }
+    
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .mainContainer {
+        grid-template-rows: 0.3fr 2fr;
+        padding: 70px 0px 0px 0px;
+    }
+    .logo-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .logo-container img{
+        position: absolute;
+        display: block;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .time{
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px 0px 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .hi{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        padding-left: 15px;
+        grid-template-rows: 1.7fr 1fr;
+    }
+    .greetings{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        line-height: 1.9rem;
+        align-items: end;
+        font-size: 1.7rem;
+        color: rgb(0, 0, 0);
+        padding: 0;;
+    }
+
+    .date{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.456);
+    }
+    .date2 {
+        display: grid;
+        grid-template-rows: 1.7fr 1fr;
+        width: 100%;
+        height: 100%;
+        padding-right: 20px;
+        text-align: right;
+        color: black;
+        font-size: 17px;
+    }
+
+    .oras, .araw {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .oras {
+        font-size: 1.7rem;
+        align-items: end;
+    }
+
+    .araw {
+        font-style: italic;
+        font-size: 13px;
+        align-items: baseline;
+    }
+
+    .mainDb{
+        width: 100%;
+        height: 640px;
+        display: grid;
+        padding: 20px 0px 2px 0px;
+        grid-template-columns: none;
+        gap: 1.3rem;
+        grid-template-rows: 3fr 1.3fr;
+    }
+    .upper{
+        width: 100%;
+        height: 600px;
+        display: grid;
+        gap: 1.3rem;
+        grid-template-rows: 1fr 1.9fr;
+        grid-template-columns: none;
+        padding: 0px 20px 20px 20px;
+    }
+    .lower{
+        width: 100%;
+        height: 610px;
+        display: grid;
+        padding: 0px 20px 0px 20px;
+        gap:1.3rem;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: none;
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        gap: 1.3rem;
+        padding: 0px 20px 30px 20px;
+    }
+    .part2{
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(to right, #8BCCE0 40%, #ffffff 90%);
+        padding: 30px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    } 
+
+    .menubar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255,255,255,0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        z-index: 100;
+    }
+
+    .menu-container.active {
+        right: 0;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile-container {
+        margin-top: 40px;
+        width: 50px;
+        height: 50px;
+        background: url('/assets/images/profile.png') center/cover no-repeat;
+        border-radius: 50%;
+        background-color: #5D8B59;
+    }
+
+    .hamburger.active span {
+        transform: rotate(180deg);
+        color: crimson;
+        content: 'close';
+    }
+
+    .pushTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: 1.27rem;
+        color: white;
+    }
+
+    .exercise-btn-container {
+        padding: 10px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .card-bottom-btn {
+        height: 36px;
+        width: 150px;
+        background-color: rgba(33, 33, 33, 0.8);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        border-bottom-right-radius: 40px;
+        cursor: pointer;
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .card-bottom-btn:hover {
+        transform: scale(1.04);
+    }
+
+    .card-bottom-btn p {
+        margin-left: 8px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .card-bottom-btn .card-btn {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        color: #000000;
+        background-color: #ffffff;
+        font-size: 16px;
+        padding: 3px 10px 4px 8px;
+        margin-bottom: 1px;
+        border-radius: 22px 12px 50px 22px;
+    }
+    .kiwi{
+        border-radius: 30px;
+        width: 100%;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        height: 100%;
+    }
+
+    .nutrition-card {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(164, 184, 53, 0.50);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+    }
+
+    .nutrition-header {
+        display: flex;
+        width: 100%;
+        margin: 18px 18px 0px 18px;
+    }
+
+    .nutrition-header h1 {
+        font-size: 27px;
+        margin-left: 8px;
+    }
+
+    .nutrition-header .egg {
+        font-size: 33px;
+        margin-left: 18px;
+    }
+
+    .nutrition-mid {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .kiwi-img {
+        width: 240px;
+        margin-bottom: 12px;
+    }
+
+    .nutrition-mid p {
+        font-size: 20.4px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .nutrition-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nutrition-btn {
+        background-color: rgba(75, 106, 74, 0.8);
+        margin-right: 17px;
+        margin-bottom: 19px;
+        width: 160px;
+    }
+
+    .cards-bottom{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .weight-card {
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .weight-header {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18px;
+    }
+
+    .weight-title {
+        display: flex;
+        flex-grow: 1;
+        font-size: 11rem;
+    }
+
+    .weight-title .dumbell {
+        margin-left: 26px;
+    }
+
+    .weight-title h1 {
+        font-size: 26px;
+        margin-left: 8px;
+    }
+
+    .weight {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        align-items: flex-end;
+        margin-right: 18px;
+    }
+
+    .weight h1 {
+        font-weight: 600;
+    }
+
+    .weight p {
+        margin-bottom: 4px;
+        margin-left: 4px;
+    }
+
+    .weight-mid {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .weight-mid img {
+        width: 320px;
+    }
+
+    .weight-bottom {
+        display: flex;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .goal-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .goal-container .person-icon {
+        font-size: 62px;
+        margin-left: 18px;
+    }
+
+    .goal h1 {
+        font-size: 18px;
+    }
+
+    .goal-middle {
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 100%;  
+    }
+
+    .motivation-container {
+        margin-right: 30px;
+    }
+
+    .motivation-container p {
+        width: 100px;
+        font-size: 21px;
+    }
+
+    .motivation-container h1 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .statistics-card {
+        background-color: #272C2B;
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+
+        flex-grow: 1;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 24px;
+        color: #ffffff;
+    }
+
+    .statistics-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .statistics-title {
+        display: flex;
+        padding: 2px 7px 2px 3px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(105, 105, 105, 0.65);
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-left: 25px;
+        color: #ffffff;
+    }
+
+    .statistics-title h1 {
+        font-size: 17px;
+        margin-left: 3px;
+        margin-top: 2px;
+    }
+
+    .statistics-title span {
+        font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+        font-size: 20px;
+    }
+
+    .cal-container {
+        display: flex;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .current-cal,
+    .limit-cal {
+        width: 50%;
+        display: flex;
+        margin-left: 25px;
+        align-items: flex-end;
+    } 
+
+    .limit-cal {
+        justify-content: flex-end;
+        margin-right: 25px;
+    }
+
+    .current-cal h1,
+    .limit-cal h1 {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .current-cal p,
+    .limit-cal p {
+        font-weight: 300;
+        font-size: 11.5px;
+        color: rgba(190, 190, 190, 0.90);
+        margin-bottom: 6px;
+        margin-left: 2px;
+    }
+
+    .cal-indicator-container {
+        width: 100%;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+
+    .cal-indicator {
+        width: 100%;
+        height: 100%;
+        background-color: #A5B835;
+        margin: 3px 25px;
+    }
+
+    .statistics {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .height {
+        display: flex;
+        margin-left: 25px;
+        align-items: flex-end;
+    }
+
+    .height h1 {
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .height p {
+        margin-bottom: 8px;
+        margin-left: 5px;
+        font-size: 12px;
+        color: rgba(190, 190, 190, 0.90);
+
+    }
+
+    .macros {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-grow: 1;
+        margin-right: 25px;
+    }
+
+    .carbs-container,
+    .proteins-container,
+    .fats-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carbs-container p,
+    .proteins-container p,
+    .fats-container p {
+        font-size: 10px;
+        letter-spacing: 0.6px;
+    }
+
+    .carbs,
+    .proteins,
+    .fats {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .carbs h1,
+    .proteins h1,
+    .fats h1 {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .carbs p,
+    .proteins p,
+    .fats p {
+        color: rgba(190, 190, 190, 0.90);
+        font-size: 12px;
+        margin-left: 5px;
+        margin-bottom: 3px;
+    }
+    
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #8BCCE0 40%, #ffffff 90%);
+        padding: 0px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 26px;
+        display: grid;
+        grid-template-rows: 0.9fr 1fr;
+    } 
+    .foodImag{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .foodImag img{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        display: block;
+    }
+    .foodInfo{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 0.3fr 0.4fr 0.8fr;
+    }
+    .foodTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .foodParag{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        padding: 10px 25px 0px 25px;
+        font-family: sans-serif;
+        font-size: 0.9rem;
+    }
+    .foodButton{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding-bottom: 10px;
+    }
+    .actualFoodButton{
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        height: 55px;
+        background-color: #000000;
+        transition: 0.2s;
+    }
+}
+
+/* Medium: tablets 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .mainContainer{
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        padding-left: 90px;
+        grid-template-rows: 0.3fr 2fr;
+    }
+    .time{
+        padding-top: 10px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .greetings{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: end;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.1rem;
+        color: rgb(0, 0, 0);
+        padding: 0;;
+    }
+
+    .date{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        font-size: 1.1rem;
+        color: rgba(0, 0, 0, 0.456);
+    }
+    .date2 {
+        display: grid;
+        grid-template-rows: 1.7fr 1fr;
+        width: 100%;
+        height: 100%;
+        padding-right: 40px;
+        text-align: right;
+        color: black;
+        font-size: 20px;
+    }
+
+    .oras, .araw {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .oras {
+        font-size: 2rem;
+        align-items: end;
+    }
+
+    .araw {
+        font-style: italic;
+        align-items: baseline;
+        font-size: 1.1rem;
+    }
+
+    .mainDb{
+        width: 100%;
+        height: 640px;
+        display: grid;
+        padding: 20px 20px 2% 0px;
+        grid-template-columns: none;
+        gap: 1.3rem;
+        grid-template-rows: 3fr 1.3fr;
+    }
+    .upper{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: 1.3rem;
+        grid-template-columns: 2fr 1fr;
+        padding: 0px 20px 20px 40px;
+    }
+    .lower{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        padding: 0px 20px 0px 40px;
+        gap:1.3rem;
+        grid-template-columns: 1fr 2fr;
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        gap: 1.3rem;
+        padding: 0px 20px 0px 40px;
+    }
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #8BCCE0 40%, #ffffff 90%);
+        padding: 30px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    } 
+    .push{
+        grid-template-columns: 2fr 1fr;
+    }
+    .pushTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        padding: 25px;
+        font-family: sans-serif;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .exercise-btn-container {
+        padding: 8px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .card-bottom-btn {
+        height: 36px;
+        width: 150px;
+        background-color: rgba(33, 33, 33, 0.8);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        border-bottom-right-radius: 40px;
+        cursor: pointer;
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .card-bottom-btn:hover {
+        transform: scale(1.04);
+    }
+
+    .card-bottom-btn p {
+        margin-left: 9px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .card-bottom-btn .card-btn {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        color: #000000;
+        background-color: #ffffff;
+        font-size: 16px;
+        padding: 3px 10px 4px 8px;
+        margin-bottom: 1px;
+        border-radius: 22px 12px 50px 22px;
+    }
+
+    .kiwi{
+        border-radius: 30px;
+        width: 100%;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        height: 100%;
+    }
+
+    .nutrition-card {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(164, 184, 53, 0.50);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+    }
+
+    .nutrition-header {
+        display: flex;
+        width: 100%;
+        margin: 18px 18px 0px 18px;
+    }
+
+    .nutrition-header h1 {
+        font-size: 15px;
+        margin-left: 8px;
+    }
+
+    .nutrition-header .egg {
+        font-size: 22px;
+        margin-left: 18px;
+    }
+
+    .nutrition-mid {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 2px;
+    }
+
+    .kiwi-img {
+        width: 140px;
+        margin-bottom: 12px;
+    }
+
+    .nutrition-mid p {
+        font-size: 10px;
+        text-align: center;
+        width: 220px;
+    }
+
+    .nutrition-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nutrition-btn {
+        background-color: rgba(75, 106, 74, 0.8);
+        margin-right: 11px;
+        margin-bottom: 9px;
+        width: 160px;
+        height: 32px;
+    }
+
+    .cards-bottom{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .weight-card {
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+    }
+
+    .weight-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    }
+
+    .weight-title {
+    display: flex;
+    flex-grow: 1;
+    font-size: 11rem;
+    }
+
+    .weight-title .dumbell {
+    margin-left: 16px;
+    }
+
+    .weight-title h1 {
+    font-size: 16px;
+    margin-left: 8px;
+    }
+
+    .weight {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-right: 18px;
+    }
+
+    .weight h1 {
+        font-weight: 600;
+    }
+
+    .weight p {
+    margin-bottom: 4px;
+    margin-left: 4px;
+    }
+
+    .weight-mid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    }
+
+    .weight-mid img {
+    width: 180px;
+    }
+
+    .weight-bottom {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+    }
+
+    .goal-container {
+    display: flex;
+    align-items: center;
+    }
+
+    .goal-container .person-icon {
+    font-size: 32px;
+    margin-left: 18px;
+    }
+
+    .goal h1 {
+    font-size: 11px;
+    }
+
+    .goal-middle {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100%;  
+    }
+
+    .motivation-container {
+    margin-right: 20px;
+    }
+
+    .motivation-container p {
+    width: 100px;
+    font-size: 1px;
+    }
+
+    .motivation-container h1 {
+    font-size: 14px;
+    }
+    .statistics-card {
+    background-color: #272C2B;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+
+    flex-grow: 1;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    color: #ffffff;
+    }
+
+    .statistics-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    }
+
+    .statistics-title {
+    display: flex;
+    padding: 2px 7px 2px 3px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(105, 105, 105, 0.65);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+    color: #ffffff;
+    }
+
+    .statistics-title h1 {
+    font-size: 17px;
+    margin-left: 3px;
+    margin-top: 2px;
+    }
+
+    .statistics-title span {
+    font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    font-size: 20px;
+    }
+
+    .cal-container {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    }
+
+    .current-cal,
+    .limit-cal {
+    width: 50%;
+    display: flex;
+    margin-left: 25px;
+    align-items: flex-end;
+    } 
+
+    .limit-cal {
+    justify-content: flex-end;
+    margin-right: 25px;
+    }
+
+    .current-cal h1,
+    .limit-cal h1 {
+        font-size: 1.2rem;
+    font-weight: 300;
+    }
+
+    .current-cal p,
+    .limit-cal p {
+    font-weight: 300;
+    font-size: 11.5px;
+    color: rgba(190, 190, 190, 0.90);
+    margin-bottom: 6px;
+    margin-left: 2px;
+    }
+
+    .cal-indicator-container {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    }
+
+    .cal-indicator {
+    width: 100%;
+    height: 100%;
+    background-color: #A5B835;
+    margin: 3px 25px;
+    }
+
+    .statistics {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 40px;
+    }
+
+    .height {
+    display: flex;
+    margin-left: 25px;
+    align-items: flex-end;
+    }
+
+    .height h1 {
+    font-weight: 300;
+    font-size: 30px;
+    }
+
+    .height p {
+    margin-bottom: 8px;
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(190, 190, 190, 0.90);
+
+    }
+
+    .macros {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 25px;
+    }
+
+    .carbs-container,
+    .proteins-container,
+    .fats-container {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .carbs-container p,
+    .proteins-container p,
+    .fats-container p {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    }
+
+    .carbs,
+    .proteins,
+    .fats {
+    display: flex;
+    align-items: flex-end;
+    }
+
+    .carbs h1,
+    .proteins h1,
+    .fats h1 {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    }
+
+    .carbs p,
+    .proteins p,
+    .fats p {
+    color: rgba(190, 190, 190, 0.90);
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    }
+
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #8BCCE0 40%, #ffffff 90%);
+        padding: 0px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 26px;
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 0.4fr 1fr;
+    } 
+    .foodImag{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .foodImag img{
+        position: absolute;
+        width: 116px;
+        height: 116px;
+        display: block;
+    }
+    .foodInfo{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        padding: 0px 25px;
+        grid-template-rows: 1.5fr 1fr 3fr;
+    }
+    .foodTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1.2rem;
+        padding-top: 10px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .foodParag{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        padding: 0px;
+        font-family: sans-serif;
+        font-size: 0.7rem;
+    }
+    .foodButton{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .actualFoodButton{
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        height: 40px;
+        background-color: #000000;
+        transition: 0.2s;
+    }
+    .actualFoodButton:hover{
+        box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.582);
+        transform: scale(1.01);
+    }
+}
+
+/* Large: laptops 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .mainContainer {
+        height: 100vh;
+    }
+
+    .mainDb{
+        width: 100%;
+        height: 900px;
+        display: grid;
+        padding: 20px 20px 2% 0px;
+        grid-template-columns: none;
+        gap: 1.3rem;
+        grid-template-rows: 3fr 1.3fr;
+    }
+    .upper{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: 1.3rem;
+        grid-template-columns: 2fr 1fr;
+        padding: 0px 20px 20px 40px;
+    }
+    .lower{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        padding: 0px 20px 0px 40px;
+        gap:1.3rem;
+        grid-template-columns: 1fr 2fr;
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        gap: 1.3rem;
+        padding: 0px 20px 0px 40px;
+    }
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #8BCCE0 40%, #ffffff 90%);
+        padding: 30px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    } 
+
+    .pushTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: baseline;
+        padding: 25px;
+        font-family: sans-serif;
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    .exercise-btn-container {
+        padding: 15px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .card-bottom-btn {
+        height: 36px;
+        width: 150px;
+        background-color: rgba(33, 33, 33, 0.8);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 12px;
+        border-bottom-right-radius: 40px;
+        cursor: pointer;
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .card-bottom-btn:hover {
+        transform: scale(1.04);
+    }
+
+    .card-bottom-btn p {
+        margin-left: 9px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .card-bottom-btn .card-btn {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        color: #000000;
+        background-color: #ffffff;
+        font-size: 16px;
+        padding: 3px 10px 4px 8px;
+        margin-bottom: 1px;
+        border-radius: 22px 12px 50px 22px;
+    }
+
+    .kiwi{
+        border-radius: 30px;
+        width: 100%;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        height: 100%;
+    }
+
+    .nutrition-card {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(164, 184, 53, 0.50);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+    }
+
+    .nutrition-header {
+        display: flex;
+        width: 100%;
+        margin: 18px 18px 0px 18px;
+    }
+
+    .nutrition-header h1 {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+
+    .nutrition-header .egg {
+        font-size: 22px;
+        margin-left: 18px;
+    }
+
+    .nutrition-mid {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 10px;
+    }
+
+    .kiwi-img {
+        width: 170px;
+        margin-bottom: 12px;
+    }
+
+    .nutrition-mid p {
+        font-size: 13px;
+        text-align: center;
+        width: 220px;
+    }
+
+    .nutrition-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nutrition-btn {
+        background-color: rgba(75, 106, 74, 0.8);
+        margin-right: 17px;
+        margin-bottom: 19px;
+        width: 160px;
+    }
+
+    .cards-bottom{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        gap: 1.3rem;
+    }
+    .part2{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #8BCCE0 40%, #ffffff 90%);
+        padding: 0px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 26px;
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 0.4fr 1fr;
+    } 
+    .foodImag{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .foodImag img{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        display: block;
+    }
+    .foodInfo{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1.5fr 2fr 3fr;
+    }
+    .foodTitle{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1.9rem;
+        padding-top: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .foodParag{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        padding: 0px 25px;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+    }
+    .foodButton{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .actualFoodButton{
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        height: 55px;
+        background-color: #000000;
+        transition: 0.2s;
+    }
+    .actualFoodButton:hover{
+        box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.582);
+        transform: scale(1.01);
+    }
+
+
+}
+
+/* Extra Large: desktops ≥ 1200px */
+@media (min-width: 1200px) {
+
+}

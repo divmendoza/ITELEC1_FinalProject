@@ -1,0 +1,1318 @@
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 1.5rem;
+    padding: 40px 27px 30px 122px;
+    grid-template-columns: 1fr 2fr;
+}
+.leftProfile{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1.8fr;
+    gap: 1.5rem;
+}
+.upper{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 10px #00000038;
+    border-radius: 36px;
+    background-color: rgb(255, 255, 255);
+}
+.lower{
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    box-shadow: 0px 4px 10px #00000038;
+    background-color: rgb(255, 255, 255);
+}
+.graphs{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 2fr 1.9fr;
+}
+.actualGraph{
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 1.2rem;
+}
+.height, .goal, .weight{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.279);
+    background-color: #ffffff;
+}
+.otherInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.infoLeft{
+    border-radius: 20px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.279);
+    background-color: rgb(255, 255, 255);
+}
+.infoRight{
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.279);
+    background-color: #f4f4f4;
+}
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 10px;
+  position: relative;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.profileTitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.profileImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+.profileImage {
+  position: relative;
+  width: 210px;
+  height: 210px;
+}
+.profileImage img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background-color: #8BCCE0;
+  object-fit: cover;
+}
+.editIcon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: white;
+  color: #333;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  transition: 0.2s;
+  padding: 2px;
+}
+.editIcon:hover {
+  transform: scale(1.1);
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 5px;
+}
+.stat span {
+  color: #A5B835;
+  background-color: #00000010;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.251);
+  font-size: 98px;
+}
+.stat p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+.goal, .weight, .height{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.infoIcons{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #6cbede81;
+}
+.data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actualData{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    line-height: 0px;
+}
+.label {
+  font-size: 0.8rem;
+  color: #333;
+}
+.motivationCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+.motivationCard h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.motivationCard p {
+  font-size: 0.95rem;
+  color: #333;
+  font-style: italic;
+}
+.weatherCard {
+    height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.time-date p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#weatherIcon {
+  font-size: 48px;
+  color: #70B8CA;
+}
+#temperature {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 4px 0;
+}
+#location {
+  color: #777;
+  font-size: 1.3rem;
+}
+.infoRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    padding: 5px;
+}
+.userActionsCard {
+    border-radius: 12px;
+    height: 100%;
+    padding: 15px;
+    width: 100%;
+}
+.userActionsCard h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.actions button {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+#settingsBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+#settingsBtn:hover {
+    background-color: #45a049;
+}
+#logoutBtn {
+    background-color: #000000;
+    color: white;
+}
+#logoutBtn:hover {
+    background-color: #000000c7;
+}
+.quickTip {
+    background-color: #acd9df74;
+    padding: 10px;
+    height: 70%;
+    display: flex;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #00796b;
+}
+.quickTip p {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+.actions button {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+#lbutton {
+    background-color: #2196F3;
+    color: white;
+}
+
+#lbutton:hover {
+    background-color: #1976D2;
+}
+
+#dailyTipBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#dailyTipBtn:hover {
+    background-color: #45a049;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+.modal-content {
+  background-color: #ffffff;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 480px;
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.close-btn:hover {
+  color: #A5B835;
+}
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+}
+.formGroup input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+.formGroup input:focus {
+  border-color: #6cbede;
+  box-shadow: 0 0 5px #6cbede70;
+}
+#saveBtn {
+  background-color: #A5B835;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+#saveBtn:hover {
+  background-color: #8fa72c;
+}
+.editProfileSection {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+}
+.profileDesc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.editBtn {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 90px;
+  transition: 0.3s;
+  font-family: 'Comic Relief';
+}
+.editBtn:hover {
+    background-color: #000000c7;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+.modalContent {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modalContent h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.formGroup input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+.saveBtn {
+  width: 100%;
+  background: #000000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Comic Relief";
+  transition: 0.3s;
+}
+.saveBtn:hover {
+    background-color: #000000c7;
+}
+#logoutModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#logoutModal .modalContent {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#logoutModal .modalActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirmBtn {
+  background-color: #5da5c2;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 14px;
+  width: 110px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.489);
+  font-family: "Comic Relief";
+}
+
+.cancelBtn {
+  background-color: #88c478;
+  color: black;
+  border: none;
+  font-family: "Comic Relief";
+  width: 110px;
+  font-size: 1.2rem;
+  height: 40px;
+  padding: 8px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.489)
+}
+.confirmBtn:hover{
+  background-color: #457b91;
+}
+.cancelBtn:hover{
+  background-color: #669359;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .modalContent {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .editBtn {
+    width: 100%;
+  }
+}
+
+/* Extra small: phones < 480px */
+@media (max-width: 479px) {
+    .modalContent{
+          max-width: 360px;
+
+    }
+   .mainContainer {
+        padding: 90px 20px 20px 20px;
+        height: 1430px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.9rem;
+    }
+    .leftProfile{
+        gap: 0.9rem;
+    }
+    .graphs{
+        gap: 0.9rem;
+        grid-template-rows: 1fr 1.3fr;
+    }
+    .otherInfo{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .profileImage {
+        position: relative;
+        width: 180px;
+        height: 180px;
+    }
+
+    .profileImage img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: #8BCCE0;
+        object-fit: cover;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        gap: 2px;
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 26px;
+    }
+
+    .weatherCard {
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding-top: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .weather-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .time-date p {
+        display: inline;
+        margin: 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .weather-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #ha{
+        font-size: 1rem;
+    }
+    #weatherIcon {
+        font-size: 30px;
+        color: #70B8CA;
+    }
+
+    #temperature {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0px 0;
+    }
+
+    #location {
+        color: #777;
+        font-size: 0.9rem;
+    }
+    .infoRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .userActionsCard {
+        border-radius: 12px;
+        height: 100%;
+        padding: 5px 19px;
+        width: 100%;
+    }
+
+    .userActionsCard h3 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .actions button {
+        flex: 1;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+    }
+
+    #settingsBtn {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    #settingsBtn:hover {
+        background-color: #45a049;
+    }
+
+    #logoutBtn {
+        background-color: #000000;
+        color: white;
+        font-size: 0.8rem;
+    }
+
+    #logoutBtn:hover {
+        background-color: #000000c7;
+    }
+
+    .quickTip {
+        background-color: #acd9df74;
+        padding: 10px;
+        height: 50%;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: #00796b;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .actions button {
+        flex: 1;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+    }
+
+    #lbutton {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    #lbutton:hover {
+        background-color: #1976D2;
+    }
+
+    #dailyTipBtn {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    #dailyTipBtn:hover {
+        background-color: #45a049;
+    }
+    .actualGraph{
+
+        border-radius: 28px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.251);
+        font-size: 40px;
+    }
+
+    .stat p {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    #goals, #weight, #height{
+        font-size: 2.6rem;
+        padding-right: 0px;
+    }
+
+    .goal, .weight, .height{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 2.5fr 4fr;
+        transition: 0.5s;
+        height: 100%;
+    }
+    .goal:hover, .weight:hover, .height:hover{
+        grid-template-columns: 1.5fr 4fr;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .infoIcons{
+        grid-template-rows: none;  
+        gap: 0rem;
+        border-radius: 0px 20px 20px 0px;
+        grid-template-columns: 1fr 0.5fr;
+        height: 100%;
+    }
+    .data{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+
+    }
+    .actualData{
+        display: flex;
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+        line-height: 0px;
+    }
+    #ha{
+        font-size: 1.5rem;
+        line-height: 10px;
+    }
+}
+
+/* Extra small: phones < 480px */
+@media (min-width: 480px) and (max-width: 581px) {
+    body{
+        height: auto;
+    }
+    .mainContainer {
+        padding: 90px 20px 20px 20px;
+        height: 1430px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .graphs{
+        grid-template-rows: 1fr 1.3fr;
+        gap: 0.8rem;
+    }
+    .otherInfo{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .leftProfile{
+        gap: 0.8rem;
+    }
+    .profileImage {
+        position: relative;
+        width: 180px;
+        height: 180px;
+    }
+
+    .profileImage img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: #8BCCE0;
+        object-fit: cover;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        gap: 2px;
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 26px;
+    }
+
+    .weatherCard {
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 21px 0px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .weather-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .time-date p {
+        display: inline;
+        margin: 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .weather-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #weatherIcon {
+        font-size: 40px;
+        color: #70B8CA;
+    }
+
+    #temperature {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0px 0;
+    }
+
+    #location {
+        color: #777;
+        font-size: 0.9rem;
+    }
+    .infoRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100%;
+        padding: 5px;
+    }
+
+    .userActionsCard {
+        border-radius: 12px;
+        height: 100%;
+        padding: 14px;
+        width: 100%;
+    }
+
+    .userActionsCard h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .actions button {
+        flex: 1;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+    }
+
+    #settingsBtn {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    #settingsBtn:hover {
+        background-color: #45a049;
+    }
+
+    #logoutBtn {
+        background-color: #000000;
+        color: white;
+    }
+
+    #logoutBtn:hover {
+        background-color: #000000c7;
+    }
+
+    .quickTip {
+        background-color: #acd9df74;
+        padding: 10px;
+        height: 44%;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: #00796b;
+    }
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+    .actions button {
+        flex: 1;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+    }
+    .actualGraph{
+        width: 100%;
+        height: 100%;
+        border-radius: 28px;
+        display: grid;
+        grid-template-columns:  none;
+        grid-template-rows:  1fr 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    #lbutton {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    #lbutton:hover {
+        background-color: #1976D2;
+    }
+
+    #dailyTipBtn {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    #dailyTipBtn:hover {
+        background-color: #45a049;
+    }
+    .actualGraph{
+
+        border-radius: 28px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.251);
+        font-size: 50px;
+    }
+
+    .stat p {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+    #goals, #weight, #height{
+        font-size: 3rem;
+    }
+
+    .goal, .weight, .height{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 2.6fr 4fr;
+        transition: 0.5s;
+        height: 100%;
+    }
+    .goal:hover, .weight:hover, .height:hover{
+        grid-template-columns: 1.5fr 4fr;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .infoIcons{
+        grid-template-rows: none;  
+        gap: 1rem;
+        border-radius: 0px 20px 20px 0px;
+        grid-template-columns: 1fr 0.5fr;
+        height: 100%;
+    }
+    .data{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+
+    }
+    .actualData{
+        display: flex;
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+        line-height: 0px;
+    }
+    #ha{
+        font-size: 1.5rem;
+        line-height: 10px;
+    }
+
+
+
+}
+
+/* Small: phones 480px–767px */
+@media (min-width: 582px) and (max-width: 767px) {
+    body{
+        height: auto;
+    }
+    .mainContainer {
+        padding: 90px 20px 20px 20px;
+        height: 1430px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    .infoLeft, .infoRight{
+        min-width: 250px;
+    }
+
+    .quickTip {
+        background-color: #acd9df74;
+
+        font-size: 1rem;
+    }
+    .actualGraph{
+
+        border-radius: 28px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.251);
+        font-size: 50px;
+    }
+
+    .stat p {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+    #goals, #weight, #height{
+        font-size: 3.6rem;
+    }
+
+    .goal, .weight, .height{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 3.7fr 4fr;
+        transition: 0.5s;
+    }
+    .goal:hover, .weight:hover, .height:hover{
+        grid-template-columns: 1.5fr 4fr;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .infoIcons{
+        grid-template-rows: none;  
+        gap: 1rem;
+        border-radius: 0px 20px 20px 0px;
+        grid-template-columns: 1fr 0.5fr;
+    }
+    .data{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+
+    }
+    .actualData{
+        display: flex;
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+        line-height: 0px;
+    }
+    #ha{
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+
+}
+
+/* Medium: tablets 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    body{
+        height: auto;
+    }
+    .mainContainer {
+        height: 1430px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Large: laptops 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .quickTip {
+        background-color: #acd9df74;
+        padding: 10px;
+        height: 70%;
+        display: flex;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+    .actualGraph{
+
+        border-radius: 28px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .stat span {
+        color: #A5B835;
+        background-color: #00000010;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.251);
+        font-size: 50px;
+    }
+
+    .stat p {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+    #goals, #weight, #height{
+        font-size: 3.6rem;
+    }
+
+    .goal, .weight, .height{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 3.7fr 4fr;
+        transition: 0.5s;
+    }
+    .goal:hover, .weight:hover, .height:hover{
+        grid-template-columns: 1.5fr 4fr;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .infoIcons{
+        grid-template-rows: none;  
+        gap: 1rem;
+        border-radius: 0px 20px 20px 0px;
+        grid-template-columns: 1fr 0.5fr;
+    }
+    .data{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 20px;
+
+    }
+    .actualData{
+        display: flex;
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+        line-height: 0px;
+    }
+    #ha{
+        font-size: 1.5rem;
+    }
+}

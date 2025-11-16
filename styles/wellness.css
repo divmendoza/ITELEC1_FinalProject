@@ -1,0 +1,1365 @@
+html {
+  scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E9F7F8;
+}
+
+h1, p {
+  margin: 0px;
+}
+
+.mainContainer{
+  width: 100%;
+  height: 100%;
+  gap: 0rem;
+  margin-left: 90px;
+  display: grid;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tracker-container,
+.recipes-container,
+.workout-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.tracker-container {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 15px;
+  padding: 20px 30px;
+  grid-template-columns: 47% calc(53% - 30px);
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "t-header t-header"
+  "t-input t-stats"
+  "t-result t-stats"
+  "t-result t-stats"
+  "t-result t-stats";
+}
+
+.tracker-header {
+  grid-area: t-header;
+}
+
+.tracker-header h1 {
+  font-weight: 600;
+}
+
+.tracker-header p {
+  color: #888888;
+}
+
+.tracker-input {
+  background-color: #8BCCE0;
+  grid-area: t-input;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tracker-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: white;
+  padding: 11px 20px 9px;
+  border-radius: 25px;
+  font-size: 14px;
+  height: 42px;
+  min-width: 100px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.tracker-input button {
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tracker-input button:hover {
+  background-color: #444;
+}
+
+.material-symbols-rounded {
+  font-size: 18px;
+}
+
+.tracker-result {
+  background-color: #272C2B;
+  grid-area: t-result;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:  40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  gap: 15px;
+}
+
+.tracker-result h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.nutrition-box {
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333;
+  width: 100%;
+  border-radius: 25px;
+  padding: 16px 24px;
+  margin-bottom: 18px;
+  text-align: left;
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.nutrition-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.nutrition-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Log button styling */
+.log-btn {
+  background-color: #A5B835; /* olive green */
+  color: white;
+  border: solid 2px white;
+  border-radius: 25px;
+  padding: 8px 40px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.log-btn:hover {
+  background-color: #98a739;
+  transform: scale(1.04);
+}
+
+.tracker-stats {
+  background-color: rgb(255, 255, 255);
+  grid-area: t-stats;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:  35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  gap: 15px;
+  
+}
+
+/* HEADER */
+.stats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.date-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #E9F7F8;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+
+.stats-header .arrow {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.stats-header h3 {
+  font-size: 16px;
+}
+
+/* CALORIE SECTION */
+.calorie-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  width: 100%;
+  gap: 60px;
+  flex-grow: 1;
+}
+
+.eaten {
+  text-align: center;
+}
+
+.eaten h2 {
+  font-size: 2rem;
+  margin: 6px 0;
+}
+
+/* CIRCULAR PROGRESS */
+.calorie-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.calorie-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.calorie-ring circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.calorie-ring .bg {
+  stroke: #ddd;
+}
+
+.calorie-ring .progress {
+  stroke: #a3b341;
+  stroke-linecap: round;
+  stroke-dasharray: 283; /* 2πr (r=45) */
+  stroke-dashoffset: calc(283 - (283 * 0)); /* 70% progress */
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.calorie-ring .text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* MACROS SECTION */
+.macros {
+  margin-top: 25px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.macros h4 {
+  margin-bottom: 4px;
+}
+
+.macro-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.macro {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+
+.macro svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.macro-bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 8;
+}
+
+.macro-progress {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.macro-progress.carbs { stroke: #e84a4a; stroke-dashoffset: calc(283 - (283 * 0.0)); }
+.macro-progress.protein { stroke: #f7a834; stroke-dashoffset: calc(283 - (283 * 0.0)); }
+.macro-progress.fat { stroke: #3b89e5; stroke-dashoffset: calc(283 - (283 * 0.0)); }
+
+.macro-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.macro-text h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.macro-text p {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 2px 0;
+}
+
+.macro-text span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tracker-header {
+  grid-area: t-header;
+}
+
+.tracker-header h1 {
+  font-weight: 600;
+}
+
+.tracker-header p {
+  color: #888888;
+}
+
+/* --- LOADING SPINNER --- */
+/* Loader animation */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3aa374;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  width: 70px;
+  height: 70px;
+  animation: spin 0.8s linear infinite;
+  margin: 25px auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Fade-in effect for results */
+.nutrition-box {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styled error messages */
+.error-message {
+  color: #ff4d4d;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  height: fit-content;
+  margin-top: 15px;
+  text-align: center;
+  align-self: center;
+  font-weight: 500;
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+
+.recipes-container {
+  height: fit-content;
+  min-height: 100vh;
+  display: grid;
+  row-gap: 15px;
+  padding: 20px 30px;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "r-header"
+  "r-input"
+  "r-list"
+  "r-list"
+  "r-list";
+}
+
+.recipes-header {
+  grid-area: r-header;
+}
+
+.recipes-header h1,
+.workout-header h1  {
+  font-weight: 600;
+}
+
+.recipes-header p,
+.workout-header p  {
+  color: #888888;
+}
+
+
+
+.recipes-input {
+  background-color: #8BCCE0;
+  grid-area: r-input;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: grid;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
+.recipes-input select,
+.recipes-input input {
+  appearance: none;
+  background: white;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  height: 42px;
+  color: #333;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+
+.recipes-input input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Dropdown arrow fix */
+.recipes-input select {
+  background-image: url("data:image/svg+xml,%3Csvg fill='black' height='24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 22px;
+  cursor: pointer;
+}
+
+
+
+.recipes-list {
+  grid-area: r-list;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.recipe-container {
+  height: 100%;
+  display: grid;
+  gap: 30px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "recipe-card1 recipe-card2 recipe-card3";
+}
+
+.recipe-container.loading {
+  grid-template-columns: 1fr;
+  grid-template-areas: none;
+}
+
+.recipe-container::-webkit-scrollbar {
+  display: none;
+}
+
+.recipe-card {
+  background: white;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-card:nth-child(1) {
+  grid-area: recipe-card1;
+}
+.recipe-card:nth-child(2) {
+  grid-area: recipe-card2;
+}
+.recipe-card:nth-child(3){
+  grid-area: recipe-card3;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.recipe-info p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.recipe-btn {
+  height: 36px;
+  width: 150px;
+  background-color: #A5B835;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-end;
+  padding-right: 8px;
+}
+
+.recipe-btn:hover {
+  transform: scale(1.04);
+}
+
+.recipe-btn p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.recipe-btn .card-btn {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 3px 10px 4px 8px;
+  margin-bottom: 1px;
+  border-radius: 22px 12px 50px 22px;
+}
+
+
+
+
+
+.recipes-list .recipe-arrow  {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #272C2B;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.recipe-arrow:hover {
+  background: #4d4d4d;
+}
+
+.recipe-arrow-left{
+  left: -10px;
+}
+
+.recipe-arrow-right {
+  right: -10px;
+}
+
+.workout-container {
+  height: fit-content;
+  min-height: 100vh;
+  display: grid;
+  row-gap: 15px;
+  padding: 20px 30px;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "w-header"
+  "w-input"
+  "w-form";
+}
+
+.workout-header {
+  grid-area: w-header;
+}
+
+.progress-bar-container {
+  grid-area: w-input;
+  background-color: #8BCCE0;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: grid;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.workoutForm {
+  grid-area: w-form;
+}
+
+.workout-container {
+  height: fit-content;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  row-gap: 15px;
+  padding: 20px 30px;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "w-header"
+  "w-input"
+  "w-form"
+  "w-form"
+  "w-form";
+}
+
+.w-progress-container {
+  grid-area: w-input;
+  background-color: #8BCCE0;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 80px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.w-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.w-progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 0;
+  border-radius: 3px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.w-progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 0%;
+  background-color: #a8cf45;
+  z-index: 1;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.w-circle {
+  background: white;
+  color: #777;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.w-circle.active {
+  background: #a8cf45;
+  color: white;
+}
+
+/* Step 1 Form */
+.form-step {
+  grid-area: w-form;
+  display: none;
+  background: #1e1e1e;
+  color: white;
+  padding: 35px;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step h2 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Goal Options */
+.goal-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  grid-auto-rows: 1fr;
+  flex: 1;
+  height: calc(100% - 110px);
+}
+
+.goal-card {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  height: 100%;
+}
+
+.goal-card:hover,
+.goal-card.selected {
+  background: #a8cf45b4;
+  color: white;
+}
+
+.goal-card .info {
+  opacity: 0.8;
+}
+
+
+/* Level Options */
+.level-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 50px;
+  row-gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+  flex: 1;
+  grid-template-rows: repeat(minmax(1fr));
+  height: calc(100% - 110px);
+  padding: 0 20px;
+}
+
+.level-card {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  height: 80%;
+  align-self: center;
+}
+
+.level-card:hover,
+.level-card.selected {
+  background: #a8cf45b4;
+  color: white;
+}
+
+/* Step 3 layout */
+.duration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 110px);
+}
+
+.duration-box {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 50px 50px 50px;
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: black;
+}
+.duration-range {
+  margin-bottom: 20px;
+}
+
+/* Range styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  align-self: center;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #a8cf45;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #a8cf45;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Step 4 Muscle Selection */
+.muscle-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-items: center;
+  height: calc(100% - 110px);
+  justify-content: center;
+}
+
+.muscle-card {
+  background-color: #1e1f23;
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  width: 100%;
+  max-width: 140px;
+  height: 85%;
+  align-self: center;
+}
+
+.muscle-card:hover {
+  transform: translateY(-3px);
+  border-color: #5eb4ff;
+}
+
+.muscle-card.active {
+  border-color: #5eb4ff;
+  background-color: #2a2b30;
+}
+
+.muscle-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.muscle-card span {
+  color: #fff;
+  font-size: 0.9rem;
+  display: block;
+}
+
+
+
+/* Buttons */
+.w-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.w-buttons button {
+  background-color: #a8cf45;
+  color: rgb(0, 0, 0);
+  border: none;
+  margin: 0 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.w-prev {
+    padding: 10px 30px 10px 15px;
+}
+
+.w-next {
+    padding: 10px 15px 10px 30px;
+}
+
+.w-buttons button:hover {
+  transform: translateY(-1px);
+}
+
+.w-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.w-arrow {
+  font-size: 20px;
+}
+
+/* Buttons styling (matches other steps) */
+.generate-btn {
+  background-color: #a8cf45;
+  border: 4px solid #fcfcfc;
+  color: #181818;
+  border-radius: 20px;
+  padding: 0.4rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 90px;
+  transition: background 0.3s;
+}
+
+.generate-btn:hover {
+  transform: translateY(-1px);
+} 
+
+
+
+/* Workout Modal */
+.workout-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* --- Modal content scrollable with 90% height --- */
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  height: 90%;
+  padding: 10px 35px 20px 35px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* --- Close button --- */
+.close-modal {
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: #ff4d4d;
+}
+
+/* --- Modal title --- */
+.modal-content h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 400px;
+  color: #111;
+}
+
+/* --- Workout list --- */
+.workout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Exercise cards --- */
+.exercise-card {
+  
+  background: #5eb4ff60;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exercise-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.instructions-container {
+  background-color: #fff;
+  padding: 15px 40px; 
+  margin: 20px 0px;
+  border-radius: 8px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.instructions-container h3{
+  margin: 10px -11px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.toggle-steps {
+  font-size: 18px;
+  color: #555;
+}
+
+.exercise-steps {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  margin: 0px 10px;
+}
+
+
+
+
+
+/* Extra small: phones < 480px */
+@media (max-width: 479px) {
+  .tracker-container {
+    height: fit-content;
+  }
+  .mainContainer{
+    margin-top: 70px;
+    margin-left: 0px;
+  }
+  .tracker-container {
+    grid-template-rows: 80px 100px 0.5fr 1fr;
+    grid-template-areas: 
+    "t-header t-header"
+    "t-input t-input"
+    "t-result t-result"
+    "t-stats t-stats";
+  }
+  .tracker-header h1,
+  .recipes-header h1
+  .workout-header h1 {
+    font-size: 24px;
+  }
+  .tracker-header p,
+  .recipes-header p
+  .workout-header p  {
+    font-size: 13px;
+  }
+  .tracker-result{
+    margin-bottom: 15px;
+  }
+  .stats-header {
+    padding: 0px;
+  }
+  .stats-header h3 {
+    font-size: 15px;
+  }
+  .stats-header .arrow {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .recipes-input {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px 40px;
+  }
+  .recipes-container {
+    grid-template-rows: auto auto 1fr;
+    height: fit-content;
+  }
+  .recipe-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "recipe-card1"
+    "recipe-card2"
+    "recipe-card3";
+  }
+  .recipe-card {
+    flex-direction: row;    
+  }
+  .recipe-card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .recipe-info h3 {
+    font-size: 0.85rem;
+  }
+  .recipe-info p {
+    font-size: 0.65rem;
+  }
+}
+
+
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .tracker-container {
+    height: fit-content;
+  }
+  .mainContainer{
+    margin-top: 70px;
+    margin-left: 0px;
+  }
+  .tracker-container {
+    grid-template-rows: 90px 100px 1fr 1.5fr;
+    grid-template-areas: 
+    "t-header t-header"
+    "t-input t-input"
+    "t-result t-result"
+    "t-stats t-stats";
+  }
+  .tracker-header h1 {
+    font-size: 28px;
+  }
+  .tracker-header p {
+    font-size: 15px;
+  }
+  .recipes-container {
+    height: fit-content;
+  }
+  .recipes-header h1 {
+    font-size: 28px;
+  }
+  .recipes-header p {
+    font-size: 15px;
+  }
+  .tracker-result {
+    margin-bottom: 15px;
+  }
+  .recipes-input {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px 40px;
+  }
+  .recipes-container {
+    grid-template-rows: auto auto 1fr;
+  }
+  .recipe-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "recipe-card1"
+    "recipe-card2"
+    "recipe-card3";
+  }
+  .recipe-card {
+    flex-direction: row;
+    
+  }
+  .recipe-card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .recipe-info h3 {
+    font-size: 1rem;
+  }
+  .recipe-info p {
+    font-size: 0.75rem;
+  }
+  
+
+}
+
+
+/* Medium: tablets 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .tracker-container{
+    height: fit-content;
+  }
+  .tracker-container {
+    grid-template-rows: 90px 100px 1fr 1.5fr;
+    grid-template-areas: 
+    "t-header t-header"
+    "t-input t-input"
+    "t-result t-result"
+    "t-stats t-stats";
+  }
+  .tracker-result {
+    margin-bottom: 15px;
+  }
+  .recipes-input {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px 40px;
+  }
+  .recipes-container {
+    height: fit-content;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+    "r-header"
+    "r-input"
+    "r-list";
+  }
+  .recipe-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  .recipe-info h3 {
+    font-size: 1rem;
+  }
+  .recipe-info p {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* Large: laptops 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
