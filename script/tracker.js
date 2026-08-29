@@ -44,7 +44,26 @@ nextDayBtn.addEventListener("click", async () => {
 // ======================================================================
 // 💾 LOG FOOD TO SUPABASE
 // ======================================================================
+function normalizeFood(food) {
+  if (!food) return null;
+
+  return {
+    name: food.name || "Food",
+    calories: Number(food.calories || 0),
+    carbohydrates_total_g: Number(food.carbohydrates_total_g || 0),
+    protein_g: Number(food.protein_g || 0),
+    fat_total_g: Number(food.fat_total_g || 0),
+  };
+}
+
 async function logFoodToSupabase(food) {
+  const safeFood = normalizeFood(food);
+
+  if (!safeFood) {
+    alert("⚠️ Please search for a food before logging it.");
+    return;
+  }
+
   try {
     const {
       data: { user },
@@ -58,7 +77,7 @@ async function logFoodToSupabase(food) {
     }
 
     const currentUserId = user.id;
-    const { calories, carbohydrates_total_g, protein_g, fat_total_g } = food;
+    const { calories, carbohydrates_total_g, protein_g, fat_total_g } = safeFood;
 
     const { error } = await supabase.from("nutrifit_stats").insert([
       {
@@ -191,6 +210,15 @@ const inputField = document.querySelector(".tracker-input input");
 const searchButton = document.querySelector(".tracker-input button");
 const resultContainer = document.querySelector(".tracker-result");
 
+function attachLogButton(button, food = null) {
+  if (!button) return;
+
+  button.addEventListener("click", async () => {
+    const selectedFood = food || window.latestFood;
+    await logFoodToSupabase(selectedFood);
+  });
+}
+
 async function fetchNutrition() {
   const query = inputField?.value.trim();
   if (!query) {
@@ -230,11 +258,7 @@ async function fetchNutrition() {
         <button class="log-btn">Log Food</button>
     `;
 
-    // Attach click listener dynamically
-    const logButton = resultContainer.querySelector(".log-btn");
-    logButton.addEventListener("click", async () => {
-      await logFoodToSupabase(window.latestFood);
-    });
+    attachLogButton(resultContainer.querySelector(".log-btn"));
   } catch (err) {
     console.error(err);
     resultContainer.innerHTML = `<div class="error-message">🚫 Failed to fetch data. Please check your connection.</div>`;
@@ -250,6 +274,15 @@ inputField?.addEventListener("keydown", (e) => {
 // 🚀 INITIALIZE
 // ======================================================================
 document.addEventListener("DOMContentLoaded", async () => {
+  window.latestFood = {
+    name: "1 cup cooked rice",
+    calories: 206,
+    carbohydrates_total_g: 45,
+    protein_g: 4.3,
+    fat_total_g: 0.4,
+  };
+
+  attachLogButton(document.querySelector(".tracker-result .log-btn"), window.latestFood);
   updateDateDisplay();
   await updateUserStats();
 });
